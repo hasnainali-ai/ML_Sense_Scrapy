@@ -16,7 +16,8 @@ class DiscountVouchersSpider(scrapy.Spider):
         'https://www.discountvouchers.co.uk/joulesclothing/' ,
         'https://www.discountvouchers.co.uk/tedbaker/' ,
         'https://www.discountvouchers.co.uk/kickers/' ,	
-        'https://www.discountvouchers.co.uk/ecco-shoes-uk/' ,	
+        'https://www.discountvouchers.co.uk/ecco-shoes-uk/' ,
+        'https://www.discountvouchers.co.uk/tommyhilfiger/' ,	
 	
         ]
     

@@ -23,7 +23,7 @@ class TopCashbackSpider(scrapy.Spider):
     def parse(self, response):
         for feed_item in response.css('.gecko-deeplink-title:nth-child(1)'):
             item = {
-                'Title': feed_item.css('::text').extract_first(),
+                'TopCashback': feed_item.css('::text').extract_first(),
             }
             yield item
 

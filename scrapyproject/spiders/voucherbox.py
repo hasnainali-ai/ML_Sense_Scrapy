@@ -25,7 +25,7 @@ class VoucherBoxSpider(scrapy.Spider):
     def parse(self, response):
         for feed_item in response.css(''):
             item = {
-                'Title': feed_item.css('::text').extract_first(),
+                'VoucherBox': feed_item.css('::text').extract_first(),
             }
             yield item
 
