@@ -24,7 +24,7 @@ class DiscountCodeSpider(scrapy.Spider):
     def parse(self, response):
         for feed_item in response.css('.deal .dailymailcouk-voucher-title-link'):
             item = {
-                'Title': feed_item.css('::text').extract_first(),
+                'DiscountCode': feed_item.css('::text').extract_first(),
             }
             yield item
 

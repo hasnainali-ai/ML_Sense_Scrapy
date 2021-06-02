@@ -25,7 +25,7 @@ class EasyFundraisingSpider(scrapy.Spider):
     def parse(self, response):
         for feed_item in response.css('.mr__half p'):
             item = {
-                'Title': feed_item.css('::text').extract_first(),
+                'EasyFundraising': feed_item.css('::text').extract_first(),
             }
             yield item
 

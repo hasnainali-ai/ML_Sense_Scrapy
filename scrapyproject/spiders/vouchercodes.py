@@ -23,9 +23,9 @@ class VoucherCodesSpider(scrapy.Spider):
         ]
     
     def parse(self, response):
-        for feed_item in response.css('div.feed .feed-item a'):
+        for feed_item in response.css(''):
             item = {
-                'Title': feed_item.css('span.card__title::text').extract_first(),
+                'VoucherCodes': feed_item.css('').extract_first(),
             }
             yield item
 

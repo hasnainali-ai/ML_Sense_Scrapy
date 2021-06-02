@@ -23,6 +23,6 @@ class GrouponSpider(scrapy.Spider):
     def parse(self, response):
         for feed_item in response.css('.coupons-list-row .coupon-tile .coupon-tile-inner'):
             item = {
-                'Title': feed_item.css('.coupon-tile-title::text').extract_first(),
+                'Groupon': feed_item.css('.coupon-tile-title::text').extract_first(),
             }
             yield item

@@ -24,7 +24,7 @@ class QuidcoSpider(scrapy.Spider):
     def parse(self, response):
         for feed_item in response.css('.pr-6 > .mb-3'):
             item = {
-                'Title': feed_item.css('::text').extract_first(),
+                'QuidcoSpider': feed_item.css('::text').extract_first(),
             }
             yield item
 

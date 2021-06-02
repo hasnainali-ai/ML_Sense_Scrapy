@@ -20,7 +20,7 @@ class HealthServiceSpider(scrapy.Spider):
     def parse(self, response):
         for feed_item in response.css('div.feed .feed-item a'):
             item = {
-                'Title': feed_item.css('span.card__title::text').extract_first(),
+                'HealthService': feed_item.css('span.card__title::text').extract_first(),
             }
             yield item
 
